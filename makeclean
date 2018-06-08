@@ -1,0 +1,33 @@
+HOME_DIR=`pwd`
+
+##################
+# Default value  #
+##################
+isAll='Y'
+
+###############
+# Parse Param #
+###############
+
+
+#ALL_DIR="."
+ALL_DIR="App Common Task"
+
+if [ "$isAll" = "Y" ]
+then
+    for cur_dir in $ALL_DIR
+    do
+        echo "Cleaning $HOME_DIR/$cur_dir ..."
+        echo " "
+        cd $HOME_DIR
+        cd $cur_dir
+        make clean
+        echo " "
+    done
+
+fi 
+
+
+cd $HOME_DIR
+	
+
